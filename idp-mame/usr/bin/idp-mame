@@ -1,0 +1,2 @@
+#!/bin/bash
+/usr/bin/idp-mame-run partnerwfg -window -rompath /usr/share/idp-mame/roms/ -hard1 /usr/share/idp-mame/bootdisks/wfg-hdd.chd
