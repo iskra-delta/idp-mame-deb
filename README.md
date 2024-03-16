@@ -10,7 +10,7 @@ To build the package, use the following command:
 dpkg-deb --build idp-mame
 ~~~
 
-Manually Compiling and Running the Iskra Delta Partner MAME Emulator
+## Manually Compiling and Running the Iskra Delta Partner MAME Emulator
 
 1. Clone the MAME Repository
 
@@ -55,7 +55,7 @@ To start the emulator with a hard disk:
 
 ~~~bash
 ./id partnerwfg -window -debug -hard1 ./hdd.chd
-~~~bash
+~~~
 
 Or, to run it with a floppy disk:
 
