@@ -1,0 +1,13 @@
+#!/bin/sh
+set -e
+
+# Check for the DEBIAN_FRONTEND environment variable
+if [ "$DEBIAN_FRONTEND" != "noninteractive" ]; then
+    echo "Configuring package..."
+fi
+
+# Notify the user
+echo "Package installation completed successfully."
+
+exit 0
+

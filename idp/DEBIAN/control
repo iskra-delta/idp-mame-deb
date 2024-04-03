@@ -1,0 +1,10 @@
+Package: idp
+Version: 1.0.0
+Architecture: amd64
+Maintainer: Tomaz Stih <tomaz.stih@post.com>
+Depends: libsdl2-2.0-0, libsdl2-2.0-0, libasound2, libqt5widgets5,
+  libqt5gui5, libqt5core5a, libxi6, libsdl2-ttf-2.0-0, libfontconfig1,
+  libstdc++6, libgcc-s1, libc6
+Section: emulators
+Priority: optional
+Description: idp is a mame based emulator for the Iskra Delta Partner by Miodrag Milanovic.
