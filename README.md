@@ -7,7 +7,7 @@ This repository hosts the necessary files for building the Debian package of the
 To build the package, use the following command:
 
 ~~~bash
-dpkg-deb --build idp-mame
+dpkg-deb --build idp
 ~~~
 
 ## Manually Compiling and Running the Iskra Delta Partner MAME Emulator

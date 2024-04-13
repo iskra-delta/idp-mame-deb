@@ -1,11 +1,5 @@
 #!/bin/bash
 
-# Check if at least one argument is provided
-if [ $# -lt 1 ]; then
-  echo "Usage: $0 <model> [additional mame options]"
-  exit 1
-fi
-
 # First argument: Computer model name
 model="$1"
 shift  # Remove the first argument, so $@ contains additional parameters
@@ -14,7 +8,7 @@ shift  # Remove the first argument, so $@ contains additional parameters
 rom=""
 disk=""
 diskarg=""
-shader="crt-geom"  # Default shader for CRT effect
+# shader="crt-geom"  # Default shader for CRT effect
 
 # Determine the ROM and disk to use based on the computer model
 case $model in
@@ -34,15 +28,18 @@ case $model in
         disk="wf-hdd.chd"
         ;;
     f)
-        rom="partnerf"
+        rom="partnerw"
         diskarg="-flop1"
         disk="f-fdd.img"
         ;;
     *)
-        echo "Invalid computer model. Please specify wfg, fg, f, or w."
-        exit 1
+        echo "Defaulting to partner model 1f."
+        rom="partnerw"
+        diskarg="-flop1"
+        disk="f-fdd.img"
         ;;
 esac
 
 # Run the ROM with the specified disk and any additional parameters
-/usr/bin/idp-mame-run $rom -window -rompath /usr/share/idp-mame/roms/ $diskarg /usr/share/idp-mame/bootdisks/$disk -video bgfx -bgfx_screen_chains $shader "$@"
+/usr/bin/idp-mame $rom -window -rompath /usr/share/idp/roms/ $diskarg /usr/share/idp/bootdisks/$disk "$@"
+# -video bgfx -bgfx_screen_chains $shader 
